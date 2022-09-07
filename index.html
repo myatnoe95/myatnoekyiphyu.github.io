@@ -1,0 +1,1070 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/bootstrap-icons.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css">
+
+      <!-- Bootstrap Font Icon CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <title>Myat's Portfolio</title>
+    <style>
+        body{
+            font-family: 'Baloo 2', cursive;
+        }
+        .profile-section{
+            background-color: #303644;
+            height: 400px;
+        }
+        .about-section{
+            background-color: #232634; 
+            /* height: 600px; */
+        }
+        .experience-section{
+            background-color: #303644; 
+            /* height: 1500px; */
+        }
+        .education-section{
+            background-color: #232634; 
+            padding-bottom: 50px;
+            /* height: 400px; */
+        }
+        .skills-section{
+            background-color: #303644; 
+            height: 900px;
+        }
+        .profile-img{
+            width: 400px; 
+            height: 550px;
+        }
+        .my-name{
+            margin-top: 60px; 
+            padding-left: 20px;
+        }
+        .greeting{
+            margin-top: 0px;
+        }
+        .story-btn{
+            border-radius: 15px;
+            background-color: #F03A17;
+            box-shadow: 0px 0px 2px 2px gray;  
+        }
+        .story-btn:hover {
+            background-color: #FFC107;
+            transition: 0.7s;
+        }
+
+        .about-me{
+            padding-top: 200px;
+        }
+        .experience-title{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .card-one{
+            /* width: 520px;  */
+            border-radius: 50px; 
+            border-top-color:#0D6EFD;
+            border-bottom-color: #FFC107; 
+            border-left-color: #0D6EFD; 
+            border-right-color:#FFC107 ; 
+            border-width: 4px;
+            background-color: #EBDDE2;
+            color: #000;
+        }
+        .card-two{
+            /* width: 520px;  */
+            border-radius: 50px; 
+            border-top-color:#C04000;
+            border-bottom-color: green; 
+            border-left-color: #C04000 ; 
+            border-right-color: green ; 
+            border-width: 4px;
+            background-color: #EBDDE2;
+            color: #000;
+        }
+        .card-three{
+            /* width: 520px;  */
+            border-radius: 50px; 
+            border-top-color:#F660AB;
+            border-bottom-color: #7F38EC; 
+            border-left-color: #F660AB;     
+            border-right-color: #7F38EC ; 
+            border-width: 4px;
+            background-color: #EBDDE2;
+            color: #000;
+        }
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .container_about {
+            height: 200px;
+            position: relative;
+        }
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left:45%;  
+        }
+        .vertical-center-exp{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 35%;
+        }
+        .typed-out{
+            overflow: hidden;
+            border-right: .15em solid #F03A17;
+            white-space: nowrap;
+            animation: 
+                typing 7s forwards;
+            font-size: 1.6rem;
+            width: 0;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+
+        .flex-wrapper {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .single-chart {
+            width: 33%;
+            justify-content: space-around ;
+        }
+
+        .circular-chart {
+            display: block;
+            margin: 10px auto;
+            max-width: 40%;
+            max-height: 200px;
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: #eee;
+            stroke-width: 3.8;
+        }
+
+        .circle {
+            fill: none;
+            stroke-width: 2.8;
+            stroke-linecap: round;
+            animation: progress 1s ease-out forwards;
+        }
+
+        @keyframes progress {
+            0% {
+                stroke-dasharray: 0 100;
+            }
+        }
+
+        .circular-chart.orange .circle {
+            stroke: #ff9f00;
+        }
+
+        .circular-chart.green .circle {
+            stroke: #4CC790;
+        }
+
+        .circular-chart.blue .circle {
+            stroke: #3c9ee5;
+        }
+
+        .circular-chart.purple .circle {
+            stroke: #7F38EC;
+        }
+
+        .circular-chart.red .circle {
+            stroke: #C04000;
+        } 
+
+        .circular-chart.pink .circle {
+            stroke:  #F660AB;
+        }
+
+        .percentage {
+            fill: #666;
+            font-family: sans-serif;
+            font-size: 0.5em;
+            text-anchor: middle;
+        }
+
+    
+        @media only screen and (max-width: 600px) {
+            .profile-section {
+                height: 480px;
+            }
+            .about-section{ 
+                height: 1100px;
+            }
+            /* .experience-section{
+                height: 3800px;
+            } */
+            .skills-section{
+                height: 1000px;
+            }
+            .profile-img{
+                width: 350px; 
+                height: 470px;
+            }
+            .my-name{
+                padding-top: 4px;
+                padding-left: 10px;
+            }
+            .greeting{
+                padding: 15px;
+                margin-top: 0px;
+            }
+            .story-btn{
+                float: right;
+            }
+            .about-me{
+                padding-top: 550px;
+            }
+            .experience-title{
+                padding-top: 20px;
+                padding-bottom: 0px;
+            }
+            .card-info{
+                width: 350px; 
+                border-radius: 50px; 
+                border-top-color:#0D6EFD;
+                border-bottom-color: #FFC107; 
+                border-left-color: #0D6EFD; 
+                border-right-color:#FFC107 ; 
+                border-width: 4px;
+            }
+
+            .container_about {
+                height: 100px;
+                position: relative;
+            }
+            .vertical-center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                left:35%;  
+            }
+
+            .vertical-center-exp{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                left: 30%;
+            }
+            .vertical-center-exp-text{
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                left: 15%;
+            }
+            .edu_img{
+                text-align: center;
+            }
+            .edu-info{
+                padding: 20px;
+            }
+            .education-section{
+                background-color: #232634;
+                padding-bottom: 2px;
+            }
+    }
+    @media only screen and (min-width: 800px) {
+        .vertical-center-exp-text{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 30%;
+        }
+        .edu_img{
+            text-align: right;
+        }
+    }
+    @media only screen and (min-width: 1200px) {
+        .vertical-center-exp-text{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            left: 40%;
+        }
+        .edu_img{
+            text-align: right;
+        }
+    }
+    </style>
+  </head>
+  <body >
+
+    <nav class="navbar navbar-expand-sm  navbar-dark" style="background-color: #303644;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item p-3">
+                        <a class="nav-link text-white" aria-current="page" href="#experiences">Experiences</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link text-white" aria-current="page" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item p-3">
+                        <a class="nav-link text-white" aria-current="page" href="/">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Profile Section -->
+
+    <div class="container-fluid profile-section">
+        <div class="row">
+            <div class="col-lg-6 col-md-8" >
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 my-name">
+                        <p class="text-white fs-1">HELLO....  </p>
+                        <p class="typed-out text-white fs-3">I' M KHING SUN THWE <br> (MYAT NOE KYI PHYU)</p>
+                    </div>
+                    <div class="col-lg-6 col-md-7">
+                        <img class="profile-img" src="./assests/img/myat.png" alt="...">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="col-lg-6 col-md-4">
+
+                <div class="text-white greeting">
+                   <h3 class="fw-bold">Who am I ❓</h3>
+                   <br>
+                    <div class="fs-5"> I'm Web Developer & Mobile Developer based in Myanmar (Yangon).</div>
+                    <br>
+                    <a href="#my-story" class="btn story-btn text-white">My Story</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- About Section -->
+    <div class="container-fluid about-section" id="my-story">
+        <div class="text-white about-me">
+             <div class="row" >
+ 
+                 <div class="col-md-6 container_about">
+                     <div class="vertical-center">
+                         <h2 class=" fw-bold">About Me </h2>
+                         <hr style="color: #E9AB17; width: 40%; height: 5px;">
+                     </div>
+                      
+                 </div>
+ 
+                 <div class="col-md-6">
+                    Hay., I'm graduated from Techanological University (Hmawbi) degree with Bachelor of Engineering Information Technology and over 3years of experiences in this particular field. I'm the one who is an active person , a good-team player , an eager listener , a good learner , an well-organised person who downs to detail. I can translate design into clean & high-quality code.
+                     <br><br>
+                     
+                     <div class="pb-2">Name &nbsp;: <span style="color: #E9AB17">Khing Sun Thwe (Myat Noe Kyi Phyu)</span></div>
+                     <div class="pb-2">DOB &nbsp;: <span style="color: #E9AB17">02/11/1995</span></div>
+                     <div class="pb-2">Address &nbsp;: <span style="color: #E9AB17">Yangon (Myanmar)</span></div>
+                     <div class="pb-2">Phone &nbsp;: <span style="color: #E9AB17">+959420260554</span></div>
+                     <div class="pb-2">Email &nbsp;: <span style="color: #E9AB17">khingsunthwe@gmail.com</span></div>
+                     <div class="pb-2">LinkedIn &nbsp;: <a href="https://www.linkedin.com/in/myat-noe-kyi-phyu-9b2b92247">https://www.linkedin.com/in/myat-noe-kyi-phyu-9b2b92247</a></div>
+                 </div>
+             </div>
+             <br>   
+        </div>
+     </div>
+
+    <!-- Experience Section -->
+    <div class="container-fluid experience-section" id="experiences">
+        <div class="container_about">
+            <div class="vertical-center-exp-text">
+                <h1 class="text-white experience-title pt-3">Working Experiences</h1>
+                <hr class="text-center" style="color: #E9AB17; width: 30%; height: 5px;">
+            </div>
+        </div>
+       
+        <div class="container px-5 pt-5">
+            <div class="row gy-4 pb-3">
+                <div class="col-md-6 col-sm-12">
+                    <div class="card text-center card-one">
+                        <div class="card-body ">
+                            <div class="row p-3">
+                                <div class="col-lg-3 col-md-12 container_about">
+                                    <div class="vertical-center-exp">
+                                        <img src="./assests/img/nap_M&E_logo.png" alt="..." style="width: 80px; height: 80px;">
+                                    </div>
+                                </div>
+    
+                                <div class="col-lg-9 col-md-12">
+                                    <div class="card-title pt-2 fw-bold fs-5">National Aids Program </div>
+                                    <div class="card-text fw-bold ">(Monitoring and Evaluation)</div>
+                                    <div class="card-text mt-2 fw-bold">Role: Full-Stack Developer</div>
+                                    ----------------------
+                                  
+                                    <div class="card-text ">
+                                       <div class="fs-5"> Language Usage: </div>
+                                       <div> Frontend Development : <span class="fw-bold">React</span> </div>
+                                       <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="card text-center card-two">
+                        <div class="card-body ">
+                            <div class="row p-3">
+
+                                <div class="col-lg-3 col-md-12 container_about">
+                                    <div class="vertical-center-exp">
+                                        <img src="./assests/img/nap_M&E_logo.png" alt="..." style="width: 80px; height: 80px;">
+                                    </div>
+                                </div>
+
+    
+                                <div class="col-lg-9 col-md-12">
+                                    <div class="card-title pt-2 fw-bold fs-5">National Aids Program </div>
+                                    <div class="card-text fw-bold">(Prevention)</div>
+                                    <div class="card-text mt-2 fw-bold">Role: Full-Stack Developer</div>
+                                    ----------------------
+                                  
+                                    <div class="card-text">
+                                        <div class="fs-5"> Language Usage: </div>
+                                        <div> Frontend Development : <span class="fw-bold">React</span>  </div>
+                                        <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+ 
+            <div class="row gy-5 pb-3" >
+                <div class="col-md-6 col-sm-12">
+                    <div class="card text-center card-three">
+                        <div class="card-body ">
+                            <div class="row p-3">
+
+                                <div class="col-lg-3 col-md-12 container_about">
+                                    <div class="vertical-center-exp">
+                                        <img src="./assests/img/AnyNet.png" alt="..." style="width: 80px; height: 80px">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-9 col-md-12">
+                                    <div class="card-title pt-4 fw-bold fs-5"> Internet Service Provider </div>
+                                    <div class="card-text mt-2 fw-bold">Role: Backend Developer & Mobile Developer</div>
+                                    ----------------------
+                                  
+                                    <div class="card-text ">
+                                        <div class="fs-5"> Language Usage: </div>
+                                        <div> Web Development : <span class="fw-bold">Laravel</span></div>
+                                        <div> Mobile Development : <span class="fw-bold">React Native CLI</span>  </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card text-center card-one">
+                        <div class="card-body ">
+                            <div class="row p-3">
+
+                                <div class="col-lg-3 col-md-12 container_about">
+                                    <div class="vertical-center-exp">
+                                        <img  src="./assests/img/skynetLogo.jpg" alt="..." style="width: 80px; height: 80px; border-radius: 20px;">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-9 col-md-12">
+                                    <div class="card-title pt-4 fw-bold fs-5">Direct to Home (DTH) Media </div>
+                                    <div class="card-text mt-3 fw-bold">Role: Mobile Developer</div>
+                                    ----------------------
+                                
+                                    <div class="card-text ">
+                                        <div class="fs-5"> Language Usage: </div>
+                                        <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                        <div> Mobile Development : <span class="fw-bold">React Native Expo</span> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+
+            <div class="row gy-5 pb-3" >
+             
+               <div class="col-md-6">
+                <div class="card text-center card-two">
+                    <div class="card-body ">
+                        <div class="row p-3">
+                            <div class="col-lg-3 col-md-12 container_about">
+                                <div class="vertical-center-exp">
+                                    <img src="./assests/img/TelehealthMyanmarLogo.jpg" alt="..." style="width: 80px; height: 80px; border-radius: 20px;">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9 col-md-12">
+                                <div class="card-title pt-4 fw-bold fs-5">Clinic Management System </div>
+                                <div class="card-text mt-3 fw-bold">Role: Full-Stack Developer</div>
+                                ----------------------
+                            
+                                <div class="card-text ">
+                                    <div class="fs-5"> Language Usage: </div>
+                                    <div> Frontend Development : <span class="fw-bold">React</span> </div>
+                                    <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+               <div class="col-md-6">
+                <div class="card text-center card-three">
+                    <div class="card-body ">
+                        <div class="row p-3">
+
+                            <div class="col-lg-3 col-md-12 container_about">
+                                <div class="vertical-center-exp">
+                                    <img src="./assests/img/Law.png" alt="..." style="width: 80px; height: 80px; border-radius: 20px;">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9 col-md-12">
+                                <div class="card-title pt-4 fw-bold fs-5"> Legal Advice Platform </div>
+                                <div class="card-text mt-3 fw-bold">Role: Frontend Developer</div>
+                                ----------------------
+                            
+                                <div class="card-text ">
+                                    <div class="fs-5"> Language Usage: </div>
+                                    <div> Frontend Development : <span class="fw-bold">React</span> </div>
+                                    <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+
+            </div>
+
+            <div class="row gy-5 pb-3" >
+               <div class="col-md-6 offset-md-3">
+                <div class="card text-center card-one">
+                    <div class="card-body ">
+                        <div class="row p-3">
+                            <div class="col-lg-3 col-md-12 container_about">
+                                <div class="vertical-center-exp">
+                                    <img src="./assests/img/Seamen.png" alt="..." style="width: 80px; height: 80px; border-radius: 20px;">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-9 col-md-12">
+                                <div class="card-title pt-4 fw-bold fs-5"> Seafarer Recruitment & Services </div>
+                                <div class="card-text mt-3 fw-bold">Role: Frontend Developer</div>
+                                ----------------------
+                            
+                                <div class="card-text ">
+                                    <div class="fs-5"> Language Usage: </div>
+                                    <div> Frontend Development : <span class="fw-bold">React</span> </div>
+                                    <div> Backend Development : <span class="fw-bold">Laravel</span> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </div>
+             </div>
+
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="container-fluid education-section" id="education">
+        <div class="container_about">
+             <div class="vertical-center">
+                 <h1 class="text-white experience-title pt-3">Education</h1>
+                 <hr class="text-center" style="color: #E9AB17; width: 30%; height: 5px;">
+             </div>
+         </div>
+ 
+  
+         <div class="row pb-5">
+             <div class="col-lg-5 col-md-4 col-sm-12 edu_img">
+                 <img src="./assests/img/Hmawbi-logo.png" alt="..." style="width: 100px; height: 100px; border-right: 3px solid #E9AB17; padding-right: 10px;">
+             </div>
+             <div class="col-lg-7 col-md-8 col-sm-12 edu-info">
+                 <div class="text-white fw-bold fs-4">Techanological University Hmawbi</div>
+                 <div class="text-white">Bachelor of Enginnering - BE</div>
+                 <div class="text-white">Information Technology</div>
+                 
+             </div>
+         </div>
+ 
+     </div> 
+
+    <!-- Skills Section -->
+    <div class="container-fluid skills-section" id="skills" >
+        <div class="container_about">
+            <div class="vertical-center">
+                <h1 class="text-white experience-title pt-3 section-font-style">Skills</h1>
+                <hr class="text-center" style="color: #E9AB17; width: 50%; height: 5px;">
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-body" style="border-right: 2px solid #E9AB17; ">
+                        <div class="card-title text-center text-white fs-3 fw-bold pb-4 section-font-style" style="text-decoration:#E9AB17 wavy underline;  text-underline-offset: 10px;">Hard Skills</div>
+                            <div class="flex-wrapper">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">HTML 5 </div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">CSS 3</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart pink">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">BootStrap</div>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="flex-wrapper">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="85, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">85%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">JavaScript</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart red">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="70, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">70%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">PHP</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart purple">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">Laravel</div>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="flex-wrapper">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path class="circle"
+                                        stroke-dasharray="70, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="20.35" class="percentage">70%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">JQuery</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart green">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">AJAX</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart pink">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">React</div>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="flex-wrapper">
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="60, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">60%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">Next</div>
+                                </div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart red">
+                                      <path class="circle-bg"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <path class="circle"
+                                        stroke-dasharray="80, 100"
+                                        d="M18 2.0845
+                                          a 15.9155 15.9155 0 0 1 0 31.831
+                                          a 15.9155 15.9155 0 0 1 0 -31.831"
+                                      />
+                                      <text x="18" y="20.35" class="percentage">80%</text>
+                                    </svg>
+                                    <div class="text-center text-white fw-bold fs-6">React Native</div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-body" style="height: 500px; ">
+                        <div class="card-title text-center text-white fs-3 fw-bold pb-4 section-font-style" style="text-decoration:#E9AB17 wavy underline;  text-underline-offset: 10px;">Soft Skills</div>
+
+                        <div class="flex-wrapper">
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart blue">
+                                  <path class="circle-bg"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <path class="circle"
+                                    stroke-dasharray="85, 100"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <text x="18" y="20.35" class="percentage">85%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Teamwork</div>
+                            </div>
+
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart red">
+                                  <path class="circle-bg"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <path class="circle"
+                                    stroke-dasharray="70, 100"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <text x="18" y="20.35" class="percentage">70%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Creativity</div>
+                            </div>
+
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart purple">
+                                  <path class="circle-bg"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <path class="circle"
+                                    stroke-dasharray="80, 100"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <text x="18" y="20.35" class="percentage">80%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Critical thinking</div>
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="flex-wrapper">
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                <path class="circle-bg"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle"
+                                    stroke-dasharray="80, 100"
+                                    d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <text x="18" y="20.35" class="percentage">80%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Problem-solving</div>
+                            </div>
+
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart green">
+                                  <path class="circle-bg"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <path class="circle"
+                                    stroke-dasharray="80, 100"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <text x="18" y="20.35" class="percentage">80%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Effective communication</div>
+                            </div>
+
+                            <div class="single-chart">
+                                <svg viewBox="0 0 36 36" class="circular-chart pink">
+                                  <path class="circle-bg"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <path class="circle"
+                                    stroke-dasharray="80, 100"
+                                    d="M18 2.0845
+                                      a 15.9155 15.9155 0 0 1 0 31.831
+                                      a 15.9155 15.9155 0 0 1 0 -31.831"
+                                  />
+                                  <text x="18" y="20.35" class="percentage">80%</text>
+                                </svg>
+                                <div class="text-center text-white fw-bold fs-6">Willingness to learn</div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+
+    <footer class="text-center text-white" style="background-color: #303644;">
+        <div class="container pt-4">
+          <section class="mb-4">
+            <div>Contact Me from</div>
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.facebook.com/myatnoe.kyiphyu.94"
+              role="button"
+              data-mdb-ripple-color="white"
+              >
+              <i class="bi-facebook"></i>
+            </a>
+      
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.instagram.com/myatnoe211"
+              role="button"
+              data-mdb-ripple-color="white"
+            >
+                <i class="bi-instagram"></i>
+            </a>
+ 
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://www.linkedin.com/in/myat-noe-kyi-phyu-9b2b92247"
+              role="button"
+              data-mdb-ripple-color="white"
+            >
+                <i class="bi-linkedin"></i>
+            </a>
+
+            <a
+              class="btn btn-link btn-floating btn-lg text-white m-1"
+              href="https://github.com/myatnoe95"
+              role="button"
+              data-mdb-ripple-color="white"
+            >
+                <i class="bi-github"></i>
+            </a>
+          </section>
+        </div>
+        <div class="text-center text-white p-3" style="background-color: #232634; ">
+            © 2022 Copyright: Myat Noe Kyi Phyu 
+        </div>
+    </footer>
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    --> 
+  </body>
+</html>
