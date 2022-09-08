@@ -110,7 +110,7 @@ body{
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    left: 35%;
+    left: 40%;
 }
 .typed-out{
     overflow: hidden;
@@ -194,19 +194,15 @@ body{
     text-anchor: middle;
 }
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 540px) and (min-width: 280px) {
     .profile-section {
         height: 480px;
     }
     .about-section{ 
         height: 1100px;
     }
-    /* .experience-section{
-        height: 3800px;
-    } */
     .skills-section{
-        height: 1000px;
+        height: 1100px;
     }
     .profile-img{
         width: 350px; 
@@ -280,29 +276,54 @@ body{
         padding-bottom: 2px;
     }
 }
-@media only screen and (min-width: 800px) {
-.vertical-center-exp-text{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 30%;
+
+@media only screen and (max-width: 912px) and (min-width: 768px) {
+    .typed-out {
+        font-size: 1.2rem;
+    }
+    .vertical-center-exp-text{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 30%;
+    }
+    .edu_img{
+        text-align: end;
+    }
+    .skills-section{
+        height: 800px;
+    }
 }
-.edu_img{
-    text-align: right;
+
+@media only screen and (max-width: 1280px) and (min-width: 1024px) {
+    .greeting{
+        margin-top: 35px;
+        padding-left: 20px;
+    }
+    .vertical-center-exp-text{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 35%;
+    }
+    .edu_img{
+        text-align: right;
+    }
 }
-}
-@media only screen and (min-width: 1200px) {
-.vertical-center-exp-text{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 40%;
-}
-.edu_img{
-    text-align: right;
-}
+@media only screen and (min-width: 1300px) {
+    .vertical-center-exp-text{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 40%;
+    }
+    .edu_img{
+        text-align: right;
+    }
 }
